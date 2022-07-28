@@ -73,6 +73,12 @@ build CMakeFiles/mad_pong.dir/Pong/Game.cpp.o: CXX_COMPILER__mad_pong_Debug /hom
   OBJECT_DIR = CMakeFiles/mad_pong.dir
   OBJECT_FILE_DIR = CMakeFiles/mad_pong.dir/Pong
 
+build CMakeFiles/mad_pong.dir/Pong/Ball.cpp.o: CXX_COMPILER__mad_pong_Debug /home/inesin/CLionProjects/mad_pong/Pong/Ball.cpp || cmake_object_order_depends_target_mad_pong
+  DEP_FILE = CMakeFiles/mad_pong.dir/Pong/Ball.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/mad_pong.dir
+  OBJECT_FILE_DIR = CMakeFiles/mad_pong.dir/Pong
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target mad_pong
@@ -81,7 +87,7 @@ build CMakeFiles/mad_pong.dir/Pong/Game.cpp.o: CXX_COMPILER__mad_pong_Debug /hom
 #############################################
 # Link the executable mad_pong
 
-build mad_pong: CXX_EXECUTABLE_LINKER__mad_pong_Debug CMakeFiles/mad_pong.dir/main.cpp.o CMakeFiles/mad_pong.dir/Pong/Engine.cpp.o CMakeFiles/mad_pong.dir/Pong/Bat.cpp.o CMakeFiles/mad_pong.dir/Pong/Game.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+build mad_pong: CXX_EXECUTABLE_LINKER__mad_pong_Debug CMakeFiles/mad_pong.dir/main.cpp.o CMakeFiles/mad_pong.dir/Pong/Engine.cpp.o CMakeFiles/mad_pong.dir/Pong/Bat.cpp.o CMakeFiles/mad_pong.dir/Pong/Game.cpp.o CMakeFiles/mad_pong.dir/Pong/Ball.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = CMakeFiles/mad_pong.dir

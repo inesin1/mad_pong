@@ -7,11 +7,6 @@
 #include "Game.h"
 //EncInclude//
 
-// Const
-const int W_WIDTH = 800;
-const int W_HEIGHT = 600;
-//EndConst
-
 //Private
 void Engine::init() {
     e_Window.create(VideoMode(W_WIDTH, W_HEIGHT),
@@ -57,6 +52,7 @@ Engine::Engine() {
 
 void Engine::start() {
     // Тут запустить меню надо
+    Game game(1);
 
     Clock clock;
 

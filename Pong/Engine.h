@@ -28,6 +28,13 @@ private:
 public:
     Engine();
 
+    //Const
+    static const int W_WIDTH = 800;
+    static const int W_HEIGHT = 600;
+    static const int W_HALF_WIDTH = W_WIDTH / 2;
+    static const int W_HALF_HEIGHT = W_HEIGHT / 2;
+    //EndConst
+
     void start();
 };
 

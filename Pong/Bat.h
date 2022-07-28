@@ -2,29 +2,43 @@
 // Bat
 //
 
+//-----------------------
+// AI Mode:
+//     0 - Off
+//     1 - On
+//-----------------------
+
 #ifndef MAD_PONG_BAT_H
 #define MAD_PONG_BAT_H
 
 #pragma once
+
+//Include//
 #include <SFML/Graphics.hpp>
+#include "Game.h"
+//EndInclude//
 
 using namespace sf;
 
 class Bat {
 private:
-    Texture b_Texture;
-    Sprite b_Sprite;
+    Texture bt_Texture;
+    Sprite bt_Sprite;
 
-    Vector2f b_Position;
-    float b_Speed;
+    Vector2f bt_Position;
+    float bt_Speed;
+
+    bool bt_AI; //Искуственный интеллект
 
     void input(float elapsedTime);
 public:
-    Bat(float posX, float posY);
+    Bat(Vector2f pos);
 
     Sprite getSprite();
 
     void update(float elapsedTime);
+
+    void setAI(bool activate);
 };
 
 
