@@ -16,6 +16,8 @@ Bat::Bat(Vector2f pos) {
 
     //start pos
     bt_Position = pos;
+
+    bt_Sprite.setOrigin(bt_Sprite.getLocalBounds().width / 2, bt_Sprite.getLocalBounds().height / 2);
 }
 
 Sprite Bat::getSprite() {
@@ -39,3 +41,17 @@ void Bat::input(float elapsedTime) {
 void Bat::setAI(bool activate) {
     bt_AI = activate;
 }
+
+float Bat::getPosY() {
+    return bt_Position.y;
+}
+
+void Bat::setPosY(float posY) {
+    bt_Position.y = posY;
+}
+
+float Bat::getSpeed() {
+    return bt_Speed;
+}
+
+Bat::Bat() = default;

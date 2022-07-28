@@ -4,7 +4,6 @@
 
 //INCLUDE//
 #include "Engine.h"
-#include "Game.h"
 //EncInclude//
 
 //Private
@@ -18,7 +17,7 @@ void Engine::update(float dtAsSeconds) {
     handleWindowEvents();
 
     //update objs
-
+    e_Game.update(dtAsSeconds);
     //endUO
 }
 
@@ -26,7 +25,9 @@ void Engine::draw() {
     e_Window.clear(Color::Black);
 
     //draw objs
-
+    e_Window.draw(e_Game.g_BatL.getSprite());
+    e_Window.draw(e_Game.g_BatR.getSprite());
+    e_Window.draw(e_Game.g_Ball.getSprite());
     //endDO
 
     e_Window.display();
@@ -52,7 +53,7 @@ Engine::Engine() {
 
 void Engine::start() {
     // Тут запустить меню надо
-    Game game(1);
+    e_Game.start();
 
     Clock clock;
 

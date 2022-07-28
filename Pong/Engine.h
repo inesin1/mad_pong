@@ -7,6 +7,7 @@
 
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Game.h"
 
 using namespace sf;
 
@@ -15,6 +16,8 @@ private:
     //Game window
     RenderWindow e_Window;
     void handleWindowEvents();
+
+    Game e_Game;
 
     //Initialize game objects
     void init();
@@ -27,13 +30,6 @@ private:
 
 public:
     Engine();
-
-    //Const
-    static const int W_WIDTH = 800;
-    static const int W_HEIGHT = 600;
-    static const int W_HALF_WIDTH = W_WIDTH / 2;
-    static const int W_HALF_HEIGHT = W_HEIGHT / 2;
-    //EndConst
 
     void start();
 };

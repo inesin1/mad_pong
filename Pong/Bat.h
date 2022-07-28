@@ -15,7 +15,6 @@
 
 //Include//
 #include <SFML/Graphics.hpp>
-#include "Game.h"
 //EndInclude//
 
 using namespace sf;
@@ -26,15 +25,24 @@ private:
     Sprite bt_Sprite;
 
     Vector2f bt_Position;
-    float bt_Speed;
+    float bt_Speed{};
 
-    bool bt_AI; //Искуственный интеллект
+    bool bt_AI{}; //Искуственный интеллект
 
     void input(float elapsedTime);
 public:
+    Bat();
     Bat(Vector2f pos);
 
+    //Sprite g
     Sprite getSprite();
+
+    //Pos g/s
+    float getPosY();
+    void setPosY(float posY);
+
+    //Speed g
+    float getSpeed();
 
     void update(float elapsedTime);
 

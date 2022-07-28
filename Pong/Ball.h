@@ -6,7 +6,7 @@
 #define MAD_PONG_BALL_H
 
 #include "SFML/Graphics.hpp"
-#include "Engine.h"
+#include "Gamedef.h"
 
 using namespace sf;
 
