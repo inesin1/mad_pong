@@ -14,12 +14,12 @@
 #pragma once
 
 //Include//
-#include <SFML/Graphics.hpp>
+#include "GameObject.h"
 //EndInclude//
 
 using namespace sf;
 
-class Bat {
+class Bat : public GameObject{
 private:
     Texture bt_Texture;
     Sprite bt_Sprite;
@@ -27,12 +27,12 @@ private:
     Vector2f bt_Position;
     float bt_Speed{};
 
-    bool bt_AI{}; //Искуственный интеллект
+    bool bt_AI; //Искуственный интеллект
 
     void input(float elapsedTime);
 public:
-    Bat();
-    Bat(Vector2f pos);
+    Bat(Game &context);
+    Bat(Game &context, Vector2f pos);
 
     //Sprite g
     Sprite getSprite();

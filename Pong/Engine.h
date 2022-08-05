@@ -6,7 +6,7 @@
 #define MAD_PONG_ENGINE_H
 
 #pragma once
-#include <SFML/Graphics.hpp>
+
 #include "Game.h"
 
 using namespace sf;

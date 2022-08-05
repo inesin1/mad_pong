@@ -7,7 +7,7 @@
 #include "Game.h"
 //EndInclude//
 
-Bat::Bat(Vector2f pos) {
+Bat::Bat(Game &context, Vector2f pos) : GameObject(context){
     bt_Speed = 400.0f;
 
     //texture n sprite
@@ -26,6 +26,7 @@ Sprite Bat::getSprite() {
 
 void Bat::update(float elapsedTime) {
     bt_Sprite.setPosition(bt_Position);
+    o_CollisionBox = bt_Sprite.getGlobalBounds();
 }
 
 void Bat::input(float elapsedTime) {
@@ -54,4 +55,4 @@ float Bat::getSpeed() {
     return bt_Speed;
 }
 
-Bat::Bat() = default;
+Bat::Bat(Game &context) : GameObject(context){}

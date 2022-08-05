@@ -2,7 +2,6 @@
 // Game
 //
 
-#include <iostream>
 #include "Game.h"
 
 map<string, string> Game::getSettings() {
@@ -37,12 +36,17 @@ void Game::input(float elapsedTime) {
             //Keyboard control
             if (Keyboard::isKeyPressed(Keyboard::Up)) {
                 g_BatR.setPosY(g_BatR.getPosY() - g_BatR.getSpeed() * elapsedTime);
-                std::cout << "Up" << endl;
+
+                //Чтоб не заходила за границы
+                if (g_BatR.getPosY() <= 0 + g_BatR.o_CollisionBox.height / 2)
+                    g_BatR.setPosY(g_BatR.getPosY() + g_BatR.getSpeed() * elapsedTime);
             }
 
             if (Keyboard::isKeyPressed(Keyboard::Down)) {
                 g_BatR.setPosY(g_BatR.getPosY() + g_BatR.getSpeed() * elapsedTime);
-                std::cout << "Down" << endl;
+
+                if (g_BatR.getPosY() >= W_HEIGHT - g_BatR.o_CollisionBox.height / 2)
+                    g_BatR.setPosY(g_BatR.getPosY() - g_BatR.getSpeed() * elapsedTime);
             }
         } else {
             //Mouse control
@@ -54,24 +58,32 @@ void Game::input(float elapsedTime) {
         //LEFT BAT
         if (Keyboard::isKeyPressed(Keyboard::W)) {
             g_BatL.setPosY(g_BatL.getPosY() - g_BatL.getSpeed() * elapsedTime);
-            std::cout << "UpL" << endl;
+
+            if (g_BatL.getPosY() <= 0 + g_BatL.o_CollisionBox.height / 2)
+                g_BatL.setPosY(g_BatL.getPosY() + g_BatL.getSpeed() * elapsedTime);
         }
 
         if (Keyboard::isKeyPressed(Keyboard::S)) {
             g_BatL.setPosY(g_BatL.getPosY() + g_BatL.getSpeed() * elapsedTime);
-            std::cout << "DownL" << endl;
+
+            if (g_BatL.getPosY() >= W_HEIGHT - g_BatL.o_CollisionBox.height / 2)
+                g_BatL.setPosY(g_BatL.getPosY() - g_BatL.getSpeed() * elapsedTime);
         }
         //EndLeftBat
 
         //RIGHT BAT
         if (Keyboard::isKeyPressed(Keyboard::Up)) {
             g_BatR.setPosY(g_BatR.getPosY() - g_BatR.getSpeed() * elapsedTime);
-            std::cout << "UpR" << endl;
+
+            if (g_BatR.getPosY() <= 0 + g_BatR.o_CollisionBox.height / 2)
+                g_BatR.setPosY(g_BatR.getPosY() + g_BatR.getSpeed() * elapsedTime);
         }
 
         if (Keyboard::isKeyPressed(Keyboard::Down)) {
             g_BatR.setPosY(g_BatR.getPosY() + g_BatR.getSpeed() * elapsedTime);
-            std::cout << "DownR" << endl;
+
+            if (g_BatR.getPosY() >= W_HEIGHT - g_BatR.o_CollisionBox.height / 2)
+                g_BatR.setPosY(g_BatR.getPosY() - g_BatR.getSpeed() * elapsedTime);
         }
         //EndRightBat
     }
@@ -84,12 +96,8 @@ void Game::setMode(int gameMode) {
 void Game::start() {
     g_Settings = getSettings();
 
-    g_BatL = Bat(G_DEFAULT_BAT_L_POS);
-    g_BatR = Bat(G_DEFAULT_BAT_R_POS);
-
     if (g_Mode == 0)
         g_BatL.setAI(true);
 }
-
 
 
