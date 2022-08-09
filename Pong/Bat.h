@@ -32,12 +32,13 @@ private:
     void input(float elapsedTime);
 public:
     Bat(Game &context);
-    Bat(Game &context, Vector2f pos);
+    Bat(Game &context, Vector2f pos, bool isRight);
 
     //Sprite g
     Sprite getSprite();
 
     //Pos g/s
+    void setPosition(Vector2f pos);
     float getPosY();
     void setPosY(float posY);
 

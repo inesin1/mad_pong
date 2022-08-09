@@ -28,6 +28,7 @@ void Engine::draw() {
     e_Window.draw(e_Game.g_BatL.getSprite());
     e_Window.draw(e_Game.g_BatR.getSprite());
     e_Window.draw(e_Game.g_Ball.getSprite());
+    e_Window.draw(e_Game.g_ScoreTable);
     //endDO
 
     e_Window.display();

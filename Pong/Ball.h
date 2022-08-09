@@ -19,13 +19,19 @@ private:
     Vector2f bl_Position;
 
     float bl_Speed;
-    float bl_Direction; //in degrees
+    float bl_Direction;         //in degrees
 
-    bool canCollide = true; //Может ли вступать в коллизию с объектами
+    bool canCollide = true;     //Может ли вступать в коллизию с объектами
+
+    bool bl_IsSleep = false;
+    int bl_SleepTime = 1000.0f;  //in ms
 public:
     Ball(Game &context);
 
     Sprite getSprite();
+    void setPosition(Vector2f pos);
+    void changeDir();
+    void sleep();
 
     void move(float elapsedTime);
     void update(float elapsedTime);

@@ -31,19 +31,33 @@ private:
     int g_Mode = 1;
 
     map<string, string> getSettings();
+
+    int g_PlayerLScore = 0;
+    int g_PlayerRScore = 0;
 public:
     Game();
 
     map<string, string> g_Settings;
+    Font g_DefaultFont;
 
-    Bat g_BatL = Bat(*this, G_DEFAULT_BAT_L_POS);
-    Bat g_BatR = Bat(*this, G_DEFAULT_BAT_R_POS);
+    //GameObjects
+    Bat g_BatL = Bat(*this, G_DEFAULT_BAT_L_POS, false);
+    Bat g_BatR = Bat(*this, G_DEFAULT_BAT_R_POS, true);
 
     Ball g_Ball = Ball(*this);
+    //End
+
+    //Scores
+    void addScorePlayerL();
+    void addScorePlayerR();
+    Text g_ScoreTable;
+    void setScoreTable();
+    //End
 
     void setMode(int gameMode);
 
     void start();
+    void restart();
 
     void update(float elapsedTime);
     void input(float elapsedTime);

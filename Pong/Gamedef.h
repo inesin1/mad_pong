@@ -15,5 +15,6 @@ using namespace sf;
 
 static const Vector2f G_DEFAULT_BAT_L_POS = Vector2f(50, W_HALF_HEIGHT);
 static const Vector2f G_DEFAULT_BAT_R_POS = Vector2f(W_WIDTH - 50, W_HALF_HEIGHT);
+static const Vector2f G_DEFAULT_BALL_POS = Vector2f(W_HALF_WIDTH, W_HALF_HEIGHT);
 
 #endif //MAD_PONG_GAMEDEF_H

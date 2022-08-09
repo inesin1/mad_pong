@@ -7,11 +7,14 @@
 #include "Game.h"
 //EndInclude//
 
-Bat::Bat(Game &context, Vector2f pos) : GameObject(context){
+Bat::Bat(Game &context, Vector2f pos, bool isRight) : GameObject(context){
     bt_Speed = 400.0f;
 
     //texture n sprite
-    bt_Texture.loadFromFile("assets/s_bat.png");
+    if (isRight)
+        bt_Texture.loadFromFile("assets/s_bat_right.png");
+    else
+        bt_Texture.loadFromFile("assets/s_bat_left.png");
     bt_Sprite.setTexture(bt_Texture);
 
     //start pos
@@ -56,3 +59,7 @@ float Bat::getSpeed() {
 }
 
 Bat::Bat(Game &context) : GameObject(context){}
+
+void Bat::setPosition(Vector2f pos) {
+    bt_Position = pos;
+}
