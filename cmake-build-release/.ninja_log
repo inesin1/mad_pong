@@ -1,0 +1,8 @@
+# ninja log v5
+1	447	1660068670206766392	CMakeFiles/mad_pong.dir/Pong/GameObject.cpp.o	94e4e4d7a30f01a7
+0	1164	1660068670922753241	CMakeFiles/mad_pong.dir/main.cpp.o	d1116ea18c93c09d
+0	1217	1660068670974752286	CMakeFiles/mad_pong.dir/Pong/Ball.cpp.o	146293339f2ad8a7
+1	1275	1660068671034751184	CMakeFiles/mad_pong.dir/Pong/Engine.cpp.o	ce52c5538ab121db
+0	1283	1660068671042751036	CMakeFiles/mad_pong.dir/Pong/Bat.cpp.o	7c1ff2af95c39bc3
+0	2904	1660068672662721240	CMakeFiles/mad_pong.dir/Pong/Game.cpp.o	8bc67b3b379fad26
+2905	2999	1660068672758719473	mad_pong	c8d73365324eb682
